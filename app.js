@@ -47,12 +47,12 @@ app.post("/", (req, res) => {
     } else {
       res.sendFile(__dirname + "/failure.html");
     }
-    response.on("data", (data) => {
-      console.log(JSON.parse(data));
-    });
+    // response.on("data", (data) => {
+    //   console.log(JSON.parse(data));
+    // });
   });
 
-  //request.write(jsonData);
+  request.write(jsonData);
   request.end();
 });
 
